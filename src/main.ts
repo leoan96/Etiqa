@@ -3,7 +3,10 @@ import { ConfigService } from '@nestjs/config';
 import { NestFactory } from '@nestjs/core';
 import { NestExpressApplication } from '@nestjs/platform-express';
 import { AppModule } from './app.module';
+import { AllExceptionFilter } from './filter/http-exception.filter';
+import { MongoExceptionFilter } from './filter/mongodb-exception.filter';
 import { CustomLogger } from './logger/custom-logger.logger';
+import * as express from 'express';
 
 const logger = new Logger('Main');
 
@@ -12,6 +15,11 @@ async function bootstrap() {
   app.useLogger(app.get(CustomLogger));
 
   const config = app.get(ConfigService);
+
+  app.useGlobalFilters(new AllExceptionFilter());
+  app.useGlobalFilters(new MongoExceptionFilter());
+  app.use(express.urlencoded({ extended: true }));
+  app.use(express.json());
 
   const port = +config.get<String>('SERVER_PORT');
   await app.listen(port);
