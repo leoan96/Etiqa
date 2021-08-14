@@ -10,6 +10,8 @@ import * as express from 'express';
 import * as httpContext from 'express-http-context';
 import { LoggingInterceptor } from './interceptor/logging.interceptor';
 import { setCorrelationId } from '../shared/utils';
+import * as helmet from 'helmet';
+import { appConfiguration, initializeSwagger } from './app.configuration';
 
 const logger = new Logger('Main');
 
@@ -19,8 +21,11 @@ async function bootstrap() {
   app.useLogger(app.get(CustomLogger));
   app.useGlobalInterceptors(new LoggingInterceptor());
 
-  const config = app.get(ConfigService);
+  const configService = app.get(ConfigService);
+  const appConfig = appConfiguration(configService);
 
+  app.use(helmet());
+  app.enableCors(appConfig.cors);
   app.useGlobalFilters(new AllExceptionFilter());
   app.useGlobalFilters(new MongoExceptionFilter());
   app.use(express.urlencoded({ extended: true }));
@@ -28,7 +33,9 @@ async function bootstrap() {
   app.use(httpContext.middleware);
   app.use(setCorrelationId);
 
-  const port = +config.get<String>('SERVER_PORT');
+  initializeSwagger(app, configService, logger);
+
+  const port = +configService.get<String>('app.port');
   await app.listen(port);
   logger.log(`Server running on port ${port}...`);
 }
