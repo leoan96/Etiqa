@@ -76,6 +76,12 @@ export class UserService {
   }
 
   async deleteUser(id: string): Promise<void> {
+    const user = await this.userModel.findById(id);
+
+    if (!user) {
+      throw new BadRequestException('Invalid user id given.');
+    }
+
     await this.userModel.findByIdAndDelete(id);
   }
 }
