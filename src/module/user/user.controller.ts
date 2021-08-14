@@ -9,6 +9,7 @@ import {
   Put,
 } from '@nestjs/common';
 import { LeanDocument } from 'mongoose';
+import { ValidationPipe } from 'src/pipe/validation.pipe';
 import { UserDocument } from '../schema/user.schema';
 import { CreateUserDto } from './dto/create-user.dto';
 import { UpdateUserDto } from './dto/update-user.dto';
@@ -33,14 +34,14 @@ export class UserController {
 
   @Post('register')
   async registerUser(
-    @Body() createUserDto: CreateUserDto,
+    @Body(new ValidationPipe()) createUserDto: CreateUserDto,
   ): Promise<UserProfile> {
     return this.userService.registerUser(createUserDto);
   }
 
   @Put(':id')
   async updateUser(
-    @Body() updateUserDto: UpdateUserDto,
+    @Body(new ValidationPipe()) updateUserDto: UpdateUserDto,
     @Param('id') id: string,
   ): Promise<UserProfile> {
     return this.userService.updateUser(id, updateUserDto);

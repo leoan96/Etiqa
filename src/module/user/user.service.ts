@@ -52,6 +52,9 @@ export class UserService {
     return filteredNewAccountDetails as UserProfile;
   }
 
+  /*
+    - if there is addition time, check whether phone, email exists or not before updating
+  */
   async updateUser(
     id: string,
     updateUserDto: UpdateUserDto,
