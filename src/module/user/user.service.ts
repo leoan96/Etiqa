@@ -75,6 +75,8 @@ export class UserService {
       .findByIdAndUpdate(id, updateUserProfile, { new: true })
       .lean();
 
+    this.logger.log(`User with id: ${updatedAccount.id} is updated.`);
+
     return updatedAccount;
   }
 
@@ -84,6 +86,8 @@ export class UserService {
     if (!user) {
       throw new BadRequestException('Invalid user id given.');
     }
+
+    this.logger.log(`User with id: ${user.id} is deleted.`);
 
     await this.userModel.findByIdAndDelete(id);
   }
