@@ -1,0 +1,685 @@
+<!doctype html>
+<html class="no-js" lang="">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <title>etiqa documentation</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <link rel="icon" type="image/x-icon" href="../images/favicon.ico">
+	   <link rel="stylesheet" href="../styles/style.css">
+        <link rel="stylesheet" href="../styles/dark.css" media="(prefers-color-scheme: dark)">
+    </head>
+    <body>
+
+        <div class="navbar navbar-default navbar-fixed-top visible-xs">
+            <a href="../" class="navbar-brand">etiqa documentation</a>
+            <button type="button" class="btn btn-default btn-menu ion-ios-menu" id="btn-menu"></button>
+        </div>
+
+        <div class="xs-menu menu" id="mobile-menu">
+                <div id="book-search-input" role="search"><input type="text" placeholder="Type to search"></div>            <compodoc-menu></compodoc-menu>
+        </div>
+
+        <div class="container-fluid main">
+           <div class="row main">
+               <div class="hidden-xs menu">
+                   <compodoc-menu mode="normal"></compodoc-menu>
+               </div>
+               <!-- START CONTENT -->
+               <div class="content controller">
+                   <div class="content-data">
+
+
+
+
+
+<ol class="breadcrumb">
+  <li>Controllers</li>
+  <li >UserController</li>
+</ol>
+
+<ul class="nav nav-tabs" role="tablist">
+        <li class="active">
+            <a href="#info" role="tab" id="info-tab" data-toggle="tab" data-link="info">Info</a>
+        </li>
+        <li >
+            <a href="#source" role="tab" id="source-tab" data-toggle="tab" data-link="source">Source</a>
+        </li>
+</ul>
+
+<div class="tab-content">
+    <div class="tab-pane fade active in" id="c-info">
+        <p class="comment">
+            <h3>File</h3>
+        </p>
+        <p class="comment">
+            <code>src/module/user/user.controller.ts</code>
+        </p>
+
+            <p class="comment">
+                <h3>Prefix</h3>
+            </p>
+            <p class="comment">
+                <code>user</code>
+            </p>
+
+
+
+
+
+
+            <section>
+    <h3 id="index">Index</h3>
+    <table class="table table-sm table-bordered index-table">
+        <tbody>
+
+                <tr>
+                    <td class="col-md-4">
+                        <h6><b>Methods</b></h6>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <ul class="index-list">
+                            <li>
+                                    <span class="modifier">Async</span>
+                                <a href="#deleteUser" >deleteUser</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Async</span>
+                                <a href="#getAllUsers" >getAllUsers</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Async</span>
+                                <a href="#getUserById" >getUserById</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Async</span>
+                                <a href="#registerUser" >registerUser</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Async</span>
+                                <a href="#updateUser" >updateUser</a>
+                            </li>
+                        </ul>
+                    </td>
+                </tr>
+
+
+
+
+
+        </tbody>
+    </table>
+</section>
+
+            <section>
+    
+    <h3 id="methods">
+        Methods
+    </h3>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="deleteUser"></a>
+                    <span class="name">
+                        <span class="modifier">Async</span>
+                        <span ><b>deleteUser</b></span>
+                        <a href="#deleteUser"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+                    <span class="modifier-icon icon ion-ios-reset"></span>
+                    <code>deleteUser(id: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank">string</a>)</code>
+                </td>
+            </tr>
+
+            <tr>
+                <td class="col-md-4">
+                    <b>Decorators : </b>
+                    <br />
+                    <code>@Delete(&#x27;:id&#x27;)<br />@ApiOperation({operationId: &#x27;deleteUser&#x27;, summary: &#x27;Delete user&#x27;, description: &#x27;Delete user&#x27;})<br />@ApiNoContentResponse({description: &#x27;Successfully deleted account&#x27;})<br />@ApiInternalServerErrorResponse({description: &#x27;Something went terribly wrong&#x27;})<br />@HttpCode(HttpStatus.NO_CONTENT)<br /></code>
+                </td>
+            </tr>
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="123"
+                            class="link-to-prism">src/module/user/user.controller.ts:123</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Type</td>
+                                    <td>Optional</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>id</td>
+                                    <td>
+                                                <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>    <code>Promise&lt;void&gt;</code>
+
+                    </div>
+                    <div class="io-description">
+                        
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="getAllUsers"></a>
+                    <span class="name">
+                        <span class="modifier">Async</span>
+                        <span ><b>getAllUsers</b></span>
+                        <a href="#getAllUsers"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+                    <span class="modifier-icon icon ion-ios-reset"></span>
+                    <code>getAllUsers()</code>
+                </td>
+            </tr>
+
+            <tr>
+                <td class="col-md-4">
+                    <b>Decorators : </b>
+                    <br />
+                    <code>@Get()<br />@ApiOperation({operationId: &#x27;getAllUsers&#x27;, summary: &#x27;Get all users&#x27;, description: &#x27;Retrieves all users&#x27;})<br />@ApiOkResponse({description: &#x27;Retrieved all users&#x27;})<br />@ApiInternalServerErrorResponse({description: &#x27;Something went terribly wrong&#x27;})<br />@HttpCode(HttpStatus.OK)<br /></code>
+                </td>
+            </tr>
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="44"
+                            class="link-to-prism">src/module/user/user.controller.ts:44</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="../interfaces/UserProfile.html" target="_self" >Promise&lt;UserProfile[]&gt;</a></code>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="getUserById"></a>
+                    <span class="name">
+                        <span class="modifier">Async</span>
+                        <span ><b>getUserById</b></span>
+                        <a href="#getUserById"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+                    <span class="modifier-icon icon ion-ios-reset"></span>
+                    <code>getUserById(id: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank">string</a>)</code>
+                </td>
+            </tr>
+
+            <tr>
+                <td class="col-md-4">
+                    <b>Decorators : </b>
+                    <br />
+                    <code>@Get(&#x27;:id&#x27;)<br />@ApiOperation({operationId: &#x27;getUserById&#x27;, summary: &#x27;Get a single account by user id&#x27;, description: &#x27;Retrieves a specific acccount&#x27;})<br />@ApiOkResponse({description: &#x27;Retrieved account&#x27;})<br />@ApiInternalServerErrorResponse({description: &#x27;Something went terribly wrong&#x27;})<br />@HttpCode(HttpStatus.OK)<br /></code>
+                </td>
+            </tr>
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="61"
+                            class="link-to-prism">src/module/user/user.controller.ts:61</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Type</td>
+                                    <td>Optional</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>id</td>
+                                    <td>
+                                                <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="../interfaces/UserProfile.html" target="_self" >Promise&lt;UserProfile&gt;</a></code>
+
+                    </div>
+                    <div class="io-description">
+                        
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="registerUser"></a>
+                    <span class="name">
+                        <span class="modifier">Async</span>
+                        <span ><b>registerUser</b></span>
+                        <a href="#registerUser"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+                    <span class="modifier-icon icon ion-ios-reset"></span>
+                    <code>registerUser(createUserDto: <a href="../classes/CreateUserDto.html" target="_self">CreateUserDto</a>)</code>
+                </td>
+            </tr>
+
+            <tr>
+                <td class="col-md-4">
+                    <b>Decorators : </b>
+                    <br />
+                    <code>@Post(&#x27;register&#x27;)<br />@ApiOperation({operationId: &#x27;registerUser&#x27;, summary: &#x27;Create a new user&#x27;, description: &#x27;Create a new user using validated values&#x27;})<br />@ApiOkResponse({description: &#x27;Successfully created a new user&#x27;})<br />@ApiBadRequestResponse({description: &#x27;Validation error. Please enter valid values&#x27;})<br />@ApiInternalServerErrorResponse({description: &#x27;Something went terribly wrong&#x27;})<br />@HttpCode(HttpStatus.CREATED)<br /></code>
+                </td>
+            </tr>
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="81"
+                            class="link-to-prism">src/module/user/user.controller.ts:81</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Type</td>
+                                    <td>Optional</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>createUserDto</td>
+                                    <td>
+                                                <code><a href="../classes/CreateUserDto.html" target="_self" >CreateUserDto</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="../interfaces/UserProfile.html" target="_self" >Promise&lt;UserProfile&gt;</a></code>
+
+                    </div>
+                    <div class="io-description">
+                        
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="updateUser"></a>
+                    <span class="name">
+                        <span class="modifier">Async</span>
+                        <span ><b>updateUser</b></span>
+                        <a href="#updateUser"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+                    <span class="modifier-icon icon ion-ios-reset"></span>
+                    <code>updateUser(updateUserDto: <a href="../classes/UpdateUserDto.html" target="_self">UpdateUserDto</a>, id: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank">string</a>)</code>
+                </td>
+            </tr>
+
+            <tr>
+                <td class="col-md-4">
+                    <b>Decorators : </b>
+                    <br />
+                    <code>@Put(&#x27;:id&#x27;)<br />@ApiOperation({operationId: &#x27;updateUser&#x27;, summary: &#x27;Update user&#x27;, description: &#x27;Update user&#x27;})<br />@ApiOkResponse({description: &#x27;Updated user with given values&#x27;})<br />@ApiBadRequestResponse({description: &#x27;Invalid update details&#x27;})<br />@ApiInternalServerErrorResponse({description: &#x27;Something went terribly wrong&#x27;})<br />@HttpCode(HttpStatus.OK)<br /></code>
+                </td>
+            </tr>
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="103"
+                            class="link-to-prism">src/module/user/user.controller.ts:103</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Type</td>
+                                    <td>Optional</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>updateUserDto</td>
+                                    <td>
+                                                <code><a href="../classes/UpdateUserDto.html" target="_self" >UpdateUserDto</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                </tr>
+                                <tr>
+                                    <td>id</td>
+                                    <td>
+                                                <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="../interfaces/UserProfile.html" target="_self" >Promise&lt;UserProfile&gt;</a></code>
+
+                    </div>
+                    <div class="io-description">
+                        
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</section>    </div>
+
+
+    <div class="tab-pane fade  tab-source-code" id="c-source">
+        <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">import {
+  Body,
+  Controller,
+  Delete,
+  Get,
+  HttpCode,
+  HttpStatus,
+  Param,
+  Post,
+  Put,
+} from &#x27;@nestjs/common&#x27;;
+import {
+  ApiBadRequestResponse,
+  ApiInternalServerErrorResponse,
+  ApiNoContentResponse,
+  ApiOkResponse,
+  ApiOperation,
+  ApiTags,
+} from &#x27;@nestjs/swagger&#x27;;
+import { ValidationPipe } from &#x27;src/pipe/validation.pipe&#x27;;
+import { CreateUserDto } from &#x27;./dto/create-user.dto&#x27;;
+import { UpdateUserDto } from &#x27;./dto/update-user.dto&#x27;;
+import { UserProfile } from &#x27;./interface/user-profile.interface&#x27;;
+import { UserService } from &#x27;./user.service&#x27;;
+
+@ApiTags(&#x27;users&#x27;)
+@Controller(&#x27;user&#x27;)
+export class UserController {
+  constructor(private readonly userService: UserService) {}
+
+  @Get()
+  @ApiOperation({
+    operationId: &#x27;getAllUsers&#x27;,
+    summary: &#x27;Get all users&#x27;,
+    description: &#x27;Retrieves all users&#x27;,
+  })
+  @ApiOkResponse({
+    description: &#x27;Retrieved all users&#x27;,
+  })
+  @ApiInternalServerErrorResponse({
+    description: &#x27;Something went terribly wrong&#x27;,
+  })
+  @HttpCode(HttpStatus.OK)
+  async getAllUsers(): Promise&lt;UserProfile[]&gt; {
+    return this.userService.getAllUsers();
+  }
+
+  @Get(&#x27;:id&#x27;)
+  @ApiOperation({
+    operationId: &#x27;getUserById&#x27;,
+    summary: &#x27;Get a single account by user id&#x27;,
+    description: &#x27;Retrieves a specific acccount&#x27;,
+  })
+  @ApiOkResponse({
+    description: &#x27;Retrieved account&#x27;,
+  })
+  @ApiInternalServerErrorResponse({
+    description: &#x27;Something went terribly wrong&#x27;,
+  })
+  @HttpCode(HttpStatus.OK)
+  async getUserById(@Param(&#x27;id&#x27;) id: string): Promise&lt;UserProfile&gt; {
+    return this.userService.getUserById(id);
+  }
+
+  @Post(&#x27;register&#x27;)
+  @ApiOperation({
+    operationId: &#x27;registerUser&#x27;,
+    summary: &#x27;Create a new user&#x27;,
+    description: &#x27;Create a new user using validated values&#x27;,
+  })
+  @ApiOkResponse({
+    description: &#x27;Successfully created a new user&#x27;,
+  })
+  @ApiBadRequestResponse({
+    description: &#x27;Validation error. Please enter valid values&#x27;,
+  })
+  @ApiInternalServerErrorResponse({
+    description: &#x27;Something went terribly wrong&#x27;,
+  })
+  @HttpCode(HttpStatus.CREATED)
+  async registerUser(
+    @Body(new ValidationPipe()) createUserDto: CreateUserDto,
+  ): Promise&lt;UserProfile&gt; {
+    return this.userService.registerUser(createUserDto);
+  }
+
+  @Put(&#x27;:id&#x27;)
+  @ApiOperation({
+    operationId: &#x27;updateUser&#x27;,
+    summary: &#x27;Update user&#x27;,
+    description: &#x27;Update user&#x27;,
+  })
+  @ApiOkResponse({
+    description: &#x27;Updated user with given values&#x27;,
+  })
+  @ApiBadRequestResponse({
+    description: &#x27;Invalid update details&#x27;,
+  })
+  @ApiInternalServerErrorResponse({
+    description: &#x27;Something went terribly wrong&#x27;,
+  })
+  @HttpCode(HttpStatus.OK)
+  async updateUser(
+    @Body(new ValidationPipe()) updateUserDto: UpdateUserDto,
+    @Param(&#x27;id&#x27;) id: string,
+  ): Promise&lt;UserProfile&gt; {
+    return this.userService.updateUser(id, updateUserDto);
+  }
+
+  @Delete(&#x27;:id&#x27;)
+  @ApiOperation({
+    operationId: &#x27;deleteUser&#x27;,
+    summary: &#x27;Delete user&#x27;,
+    description: &#x27;Delete user&#x27;,
+  })
+  @ApiNoContentResponse({
+    description: &#x27;Successfully deleted account&#x27;,
+  })
+  @ApiInternalServerErrorResponse({
+    description: &#x27;Something went terribly wrong&#x27;,
+  })
+  @HttpCode(HttpStatus.NO_CONTENT)
+  async deleteUser(@Param(&#x27;id&#x27;) id: string): Promise&lt;void&gt; {
+    return this.userService.deleteUser(id);
+  }
+}
+</code></pre>
+    </div>
+</div>
+
+
+
+
+
+
+
+
+
+                   
+
+
+
+
+                   </div><div class="search-results">
+    <div class="has-results">
+        <h1 class="search-results-title"><span class='search-results-count'></span> result-matching "<span class='search-query'></span>"</h1>
+        <ul class="search-results-list"></ul>
+    </div>
+    <div class="no-results">
+        <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+    </div>
+</div>
+</div>
+               <!-- END CONTENT -->
+           </div>
+       </div>
+
+       <script>
+            var COMPODOC_CURRENT_PAGE_DEPTH = 1;
+            var COMPODOC_CURRENT_PAGE_CONTEXT = 'controller';
+            var COMPODOC_CURRENT_PAGE_URL = 'UserController.html';
+            var MAX_SEARCH_RESULTS = 15;
+       </script>
+
+       <script src="../js/libs/custom-elements.min.js"></script>
+       <script src="../js/libs/lit-html.js"></script>
+       
+       <script type="module" src="../js/menu-wc.js" defer></script>
+       <script nomodule src="../js/menu-wc_es5.js" defer></script>
+
+       <script src="../js/libs/bootstrap-native.js"></script>
+
+       <script src="../js/libs/es6-shim.min.js"></script>
+       <script src="../js/libs/EventDispatcher.js"></script>
+       <script src="../js/libs/promise.min.js"></script>
+       <script src="../js/libs/zepto.min.js"></script>
+
+       <script src="../js/compodoc.js"></script>
+
+       <script src="../js/tabs.js"></script>
+       <script src="../js/menu.js"></script>
+       <script src="../js/libs/clipboard.min.js"></script>
+       <script src="../js/libs/prism.js"></script>
+       <script src="../js/sourceCode.js"></script>
+          <script src="../js/search/search.js"></script>
+          <script src="../js/search/lunr.min.js"></script>
+          <script src="../js/search/search-lunr.js"></script>
+          <script src="../js/search/search_index.js"></script>
+       <script src="../js/lazy-load-graphs.js"></script>
+
+
+    </body>
+</html>

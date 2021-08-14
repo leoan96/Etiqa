@@ -1,0 +1,177 @@
+<!doctype html>
+<html class="no-js" lang="">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <title>etiqa documentation</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <link rel="icon" type="image/x-icon" href="./images/favicon.ico">
+	   <link rel="stylesheet" href="./styles/style.css">
+        <link rel="stylesheet" href="./styles/dark.css" media="(prefers-color-scheme: dark)">
+    </head>
+    <body>
+
+        <div class="navbar navbar-default navbar-fixed-top visible-xs">
+            <a href="./" class="navbar-brand">etiqa documentation</a>
+            <button type="button" class="btn btn-default btn-menu ion-ios-menu" id="btn-menu"></button>
+        </div>
+
+        <div class="xs-menu menu" id="mobile-menu">
+                <div id="book-search-input" role="search"><input type="text" placeholder="Type to search"></div>            <compodoc-menu></compodoc-menu>
+        </div>
+
+        <div class="container-fluid main">
+           <div class="row main">
+               <div class="hidden-xs menu">
+                   <compodoc-menu mode="normal"></compodoc-menu>
+               </div>
+               <!-- START CONTENT -->
+               <div class="content getting-started">
+                   <div class="content-data">
+
+<h1 id="etiqa">Etiqa</h1>
+<!-- PROJECT LOGO -->
+<br />
+<p align="center">
+  <a href="https://github.com/othneildrew/Best-README-Template">
+    <img src="images/logo.png" alt="Logo" width="80" height="80">
+  </a>
+
+  <h3 align="center">Etiqa-README</h3>
+
+  <p align="center">
+    Responsible for registration, delete, update, and get action of user.
+  </p>
+</p>
+
+<!-- TABLE OF CONTENTS -->
+<details open="open">
+  <summary>Table of Contents</summary>
+  <ol>
+    <li>
+      <a href="#about-the-project">About The Project</a>
+    </li>
+    <li>
+      <a href="#getting-started">Getting Started</a>
+      <ul>
+        <li><a href="#prerequisites">Prerequisites</a></li>
+        <li><a href="#installation">Installation</a></li>
+      </ul>
+    </li>
+    <li><a href="#usage">Usage</a></li>
+    <li><a href="#license">License</a></li>
+
+  </ol>
+</details>
+
+<!-- GETTING STARTED -->
+
+<h2 id="getting-started">Getting Started</h2>
+<p>This is an example of how you may give instructions on setting up your project locally.
+To get a local copy up and running follow these simple example steps.</p>
+<h3 id="prerequisites">Prerequisites</h3>
+<p>This is an example of how to list things you need to use the software and how to install them.</p>
+<ul>
+<li><p>npm</p>
+<div><pre class="line-numbers"><code class="language-sh">npm install npm&#64;latest -g</code></pre></div></li>
+<li><p>create a .env file</p>
+</li>
+<li><p>store secrets &amp; environment variables (the values below are just sample values, please replace them with your own credentials)</p>
+</li>
+<li><div><pre class="line-numbers"><code class="language-sh">SERVER_PORT=3000
+NODE_ENV=development
+MONGO_DATABASE_URI=mongodb+srv://&lt;username&gt;:&lt;password&gt;&#64;cluster0.tihvu.mongodb.net/&lt;database&gt;?authSource=admin&amp;replicaSet=atlas-ltmo8u-shard-0&amp;w=majority&amp;readPreference=primary&amp;appname=MongoDB%20Compass&amp;retryWrites=true&amp;ssl=true
+EXPRESS_SESSION_SECRET=dfc89d6a182025d62ab2ae3485b0497b4cc9397f1ab820fb3b5f3fa99c45
+REDIS_PORT=15136
+REDIS_HOST=redis-15136.c1.ap-southeast-3-5.ec2.cloud.redislabs.com
+REDIS_PASSWORD=26186baa6eb3d6088925571d166564db0a1f3d5931c7386aa0b08a6d6fa8</code></pre></div></li>
+</ul>
+<h3 id="installation">Installation</h3>
+<ol>
+<li>Clone the repo<div><pre class="line-numbers"><code class="language-sh">git clone git&#64;github.com:leoan96/etiqa.git</code></pre></div></li>
+<li>Install NPM packages<div><pre class="line-numbers"><code class="language-sh">npm install</code></pre></div></li>
+<li>Start server<div><pre class="line-numbers"><code class="language-sh">npm run start:dev</code></pre></div></li>
+</ol>
+<!-- USAGE EXAMPLES -->
+
+<h2 id="usage">Usage</h2>
+<p>You can utilize the api endpoints using either Postman or visiting <a href="http://localhost:3000">http://localhost:3000</a></p>
+<!-- ![](images/swagger-main.png)
+![](images/swagger-example.png) -->
+
+<p><em>For more examples, please refer to the <a href="https://example.com">Documentation</a></em></p>
+<!-- LICENSE -->
+
+<h2 id="license">License</h2>
+<p>Distributed under the MIT License. See <code>LICENSE</code> for more information.</p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                   
+
+
+
+
+                   </div><div class="search-results">
+    <div class="has-results">
+        <h1 class="search-results-title"><span class='search-results-count'></span> result-matching "<span class='search-query'></span>"</h1>
+        <ul class="search-results-list"></ul>
+    </div>
+    <div class="no-results">
+        <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+    </div>
+</div>
+</div>
+               <!-- END CONTENT -->
+           </div>
+       </div>
+
+       <script>
+            var COMPODOC_CURRENT_PAGE_DEPTH = 0;
+            var COMPODOC_CURRENT_PAGE_CONTEXT = 'getting-started';
+            var COMPODOC_CURRENT_PAGE_URL = 'index.html';
+            var MAX_SEARCH_RESULTS = 15;
+       </script>
+
+       <script src="./js/libs/custom-elements.min.js"></script>
+       <script src="./js/libs/lit-html.js"></script>
+       
+       <script type="module" src="./js/menu-wc.js" defer></script>
+       <script nomodule src="./js/menu-wc_es5.js" defer></script>
+
+       <script src="./js/libs/bootstrap-native.js"></script>
+
+       <script src="./js/libs/es6-shim.min.js"></script>
+       <script src="./js/libs/EventDispatcher.js"></script>
+       <script src="./js/libs/promise.min.js"></script>
+       <script src="./js/libs/zepto.min.js"></script>
+
+       <script src="./js/compodoc.js"></script>
+
+       <script src="./js/tabs.js"></script>
+       <script src="./js/menu.js"></script>
+       <script src="./js/libs/clipboard.min.js"></script>
+       <script src="./js/libs/prism.js"></script>
+       <script src="./js/sourceCode.js"></script>
+          <script src="./js/search/search.js"></script>
+          <script src="./js/search/lunr.min.js"></script>
+          <script src="./js/search/search-lunr.js"></script>
+          <script src="./js/search/search_index.js"></script>
+       <script src="./js/lazy-load-graphs.js"></script>
+
+
+    </body>
+</html>
