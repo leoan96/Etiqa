@@ -5,6 +5,9 @@ export type UserDocument = User & Document;
 
 @Schema({ toObject: { getters: true }, versionKey: false })
 export class User {
+  @Prop({ default: new Date().toISOString() })
+  createdAt: Date;
+
   @Prop({ required: true })
   username: string;
 
@@ -19,6 +22,9 @@ export class User {
 
   @Prop({ default: 'en' })
   hobby: [string];
+
+  @Prop()
+  updatedAt: Date;
 }
 
 export const UserSchema = SchemaFactory.createForClass(User);
