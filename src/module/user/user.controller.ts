@@ -17,7 +17,7 @@ import {
   ApiOperation,
   ApiTags,
 } from '@nestjs/swagger';
-import { ValidationPipe } from 'src/pipe/validation.pipe';
+import { ValidationPipe } from '../../pipe/validation.pipe';
 import { CreateUserDto } from './dto/create-user.dto';
 import { UpdateUserDto } from './dto/update-user.dto';
 import { UserProfile } from './interface/user-profile.interface';
