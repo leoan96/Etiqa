@@ -1,0 +1,252 @@
+{
+  "openapi": "3.0.0",
+  "info": {
+    "title": "User API",
+    "description": "CRUD methods for users",
+    "version": "1.0.0",
+    "contact": {}
+  },
+  "tags": [
+    {
+      "name": "users",
+      "description": ""
+    }
+  ],
+  "servers": [],
+  "components": {
+    "schemas": {
+      "CreateUserDto": {
+        "type": "object",
+        "properties": {
+          "username": {
+            "type": "string",
+            "description": "username",
+            "example": "john"
+          },
+          "email": {
+            "type": "string",
+            "description": "email",
+            "example": "john@gmail.com"
+          },
+          "phoneNumber": {
+            "type": "string",
+            "description": "phone number",
+            "example": "920-291-2140"
+          },
+          "skillsets": {
+            "type": "string",
+            "description": "skillsets",
+            "example": [
+              "java",
+              "typescript"
+            ]
+          },
+          "hobby": {
+            "type": "string",
+            "description": "hobby",
+            "example": [
+              "swimming",
+              "reading"
+            ]
+          }
+        },
+        "required": [
+          "username",
+          "email",
+          "phoneNumber",
+          "skillsets",
+          "hobby"
+        ]
+      },
+      "UpdateUserDto": {
+        "type": "object",
+        "properties": {
+          "username": {
+            "type": "string",
+            "description": "username",
+            "example": "john"
+          },
+          "email": {
+            "type": "string",
+            "description": "email",
+            "example": "john@gmail.com"
+          },
+          "phoneNumber": {
+            "type": "string",
+            "description": "phone number",
+            "example": "920-291-2140"
+          },
+          "skillsets": {
+            "type": "string",
+            "description": "skillsets",
+            "example": [
+              "java",
+              "typescript"
+            ]
+          },
+          "hobby": {
+            "type": "string",
+            "description": "hobby",
+            "example": [
+              "swimming",
+              "reading"
+            ]
+          }
+        },
+        "required": [
+          "username",
+          "email",
+          "phoneNumber",
+          "skillsets",
+          "hobby"
+        ]
+      }
+    }
+  },
+  "paths": {
+    "/user": {
+      "get": {
+        "operationId": "getAllUsers",
+        "summary": "Get all users",
+        "description": "Retrieves all users",
+        "parameters": [],
+        "responses": {
+          "200": {
+            "description": "Retrieved all users"
+          },
+          "500": {
+            "description": "Something went terribly wrong"
+          }
+        },
+        "tags": [
+          "users"
+        ]
+      }
+    },
+    "/user/{id}": {
+      "get": {
+        "operationId": "getUserById",
+        "summary": "Get a single account by user id",
+        "description": "Retrieves a specific acccount",
+        "parameters": [
+          {
+            "name": "id",
+            "required": true,
+            "in": "path",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Retrieved account"
+          },
+          "500": {
+            "description": "Something went terribly wrong"
+          }
+        },
+        "tags": [
+          "users"
+        ]
+      },
+      "put": {
+        "operationId": "updateUser",
+        "summary": "Update user",
+        "description": "Update user",
+        "parameters": [
+          {
+            "name": "id",
+            "required": true,
+            "in": "path",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/UpdateUserDto"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Updated user with given values"
+          },
+          "400": {
+            "description": "Invalid update details"
+          },
+          "500": {
+            "description": "Something went terribly wrong"
+          }
+        },
+        "tags": [
+          "users"
+        ]
+      },
+      "delete": {
+        "operationId": "deleteUser",
+        "summary": "Delete user",
+        "description": "Delete user",
+        "parameters": [
+          {
+            "name": "id",
+            "required": true,
+            "in": "path",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "204": {
+            "description": "Successfully deleted account"
+          },
+          "500": {
+            "description": "Something went terribly wrong"
+          }
+        },
+        "tags": [
+          "users"
+        ]
+      }
+    },
+    "/user/register": {
+      "post": {
+        "operationId": "registerUser",
+        "summary": "Create a new user",
+        "description": "Create a new user using validated values",
+        "parameters": [],
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/CreateUserDto"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Successfully created a new user"
+          },
+          "400": {
+            "description": "Validation error. Please enter valid values"
+          },
+          "500": {
+            "description": "Something went terribly wrong"
+          }
+        },
+        "tags": [
+          "users"
+        ]
+      }
+    }
+  }
+}

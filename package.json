@@ -46,6 +46,7 @@
     "@nestjs/cli": "^7.6.0",
     "@nestjs/schematics": "^7.3.0",
     "@nestjs/testing": "^7.6.18",
+    "@openapitools/openapi-generator-cli": "^2.3.10",
     "@types/express": "^4.17.13",
     "@types/jest": "^26.0.24",
     "@types/node": "^16.0.0",
