@@ -2,6 +2,7 @@ import { Logger } from '@nestjs/common';
 import { ConfigService } from '@nestjs/config';
 import { NestExpressApplication } from '@nestjs/platform-express';
 import { DocumentBuilder, SwaggerModule } from '@nestjs/swagger';
+import * as fs from 'fs';
 
 export const appConfiguration = (configService: ConfigService) => ({
   cors: {
@@ -39,6 +40,17 @@ export const initializeSwagger = (
     .build();
 
   const document = SwaggerModule.createDocument(app, config);
+  const writeSwaggerJson = (path: string, document) => {
+    fs.writeFileSync(
+      `${path}/swagger.json`,
+      JSON.stringify(document, null, 2),
+      {
+        encoding: 'utf8',
+      },
+    );
+  };
+  writeSwaggerJson(`${process.cwd()}`, document);
+  // openapi-generator-cli generate -i swagger.json -g typescript-axios -o client-sdk (generate openapi client sdk)
   SwaggerModule.setup('api', app, document);
   logger.log(`Swagger running on ${appBaseUrl}/api...`);
 };
