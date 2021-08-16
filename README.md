@@ -52,15 +52,12 @@ This is an example of how to list things you need to use the software and how to
   ```
 
 - create a .env file
-- store secrets & environment variables (the values below are just sample values, please replace them with your own credentials)
+- save environment variables to the .env file
 - ```sh
   SERVER_PORT=3000
   NODE_ENV=development
-  MONGO_DATABASE_URI=mongodb+srv://<username>:<password>@cluster0.tihvu.mongodb.net/<database>?authSource=admin&replicaSet=atlas-ltmo8u-shard-0&w=majority&readPreference=primary&appname=MongoDB%20Compass&retryWrites=true&ssl=true
-  EXPRESS_SESSION_SECRET=dfc89d6a182025d62ab2ae3485b0497b4cc9397f1ab820fb3b5f3fa99c45
-  REDIS_PORT=15136
-  REDIS_HOST=redis-15136.c1.ap-southeast-3-5.ec2.cloud.redislabs.com
-  REDIS_PASSWORD=26186baa6eb3d6088925571d166564db0a1f3d5931c7386aa0b08a6d6fa8
+  MONGO_DATABASE_URI=mongodb://localhost:27017/etiqa
+  APP_BASE_URL=http://localhost:3000
   ```
 
 ### Installation
@@ -73,21 +70,30 @@ This is an example of how to list things you need to use the software and how to
    ```sh
    npm install
    ```
-3. Start server
+3. Start local MongoDB database
+4. Start server
    ```sh
    npm run start:dev
    ```
+5. Generate documentation
+   ```sh
+   npx @compodoc/compodoc -p tsconfig.json -s
+   ```
+6. Visit http://localhost:8080
+
+### Alternative setup by using docker (start docker engine)
+
+1. docker build -t backend .
+2. docker run -p 3000:3000 backend
 
 <!-- USAGE EXAMPLES -->
 
 ## Usage
 
-You can utilize the api endpoints using either Postman or visiting http://localhost:3000
+You can utilize the api endpoints using either Postman(http://localhost:3000) or visiting its swagger endpoints(http://localhost:3000/api)
 
-<!-- ![](images/swagger-main.png)
-![](images/swagger-example.png) -->
-
-_For more examples, please refer to the [Documentation](https://example.com)_
+![](images/swagger-main.png)
+![](images/docs.png)
 
 <!-- LICENSE -->
 
